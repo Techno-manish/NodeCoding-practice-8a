@@ -1,0 +1,51 @@
+##API 1
+
+##CASE 1
+GET http://localhost:3000/todos/?status=TO%20DO
+
+##CASE 2
+GET http://localhost:3000/todos/?priority=HIG##
+
+##CASE 3
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+##CASE 4
+GET http://localhost:3000/todos/?search_q=Play
+
+##API 2 get a todo based on id
+GET http://localhost:3000/todos/2
+
+##API 3 add a todo
+POST http://localhost:3000/todos/
+Content-Type: application/json
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+##API 4 Update todo
+##Case 1
+PUT http://localhost:3000/todos/2
+Content-Type: application/json
+{
+  "status": "DONE"
+}
+
+##Case 2
+PUT http://localhost:3000/todos/2
+Content-Type: application/json
+{
+  "priority": "HIGH"
+}
+
+##Case 3
+PUT http://localhost:3000/todos/2
+Content-Type: application/json
+{
+  "todo": "Some task"
+}
+
+##API 5 Delete todo
+DELETE http://localhost:3000/todos/2
