@@ -234,6 +234,7 @@ Updates the details of a specific todo based on the todo ID
 
 Deletes a todo from the todo table based on the todo ID
 
+
 #### Response
 
 ```
